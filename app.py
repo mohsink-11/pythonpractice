@@ -3,6 +3,8 @@ import pyodbc
 
 app=Flask(__name__)
 
+
+
 # Define the connection string
 connection_string = (
     "Driver={SQL Server};"
