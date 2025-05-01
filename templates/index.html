@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display SQL Records</title>
+  <style>
+    table,th,td{
+        border:1px solid black;
+        border-collapse:collapse;
+        padding:5px;
+    }
+</style>
+</head>
+<body>
+
+  <h1>Add New Employee</h1>
+  <form method="post">
+    <label >Id:</label><input type="number" name="empid">
+    <label >Name:</label><input type="text" name="empname">
+    <label>Salary:</label><input type="number" name="empsalary">
+    <input type="submit" value="Add Employee">
+  </form>
+<hr>
+<h1>SQL Records</h1>
+
+<ul>
+  <table>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>SALARY</th>
+    {% for row in rows %}
+    
+    <tr>
+        <td> {{row.Id}}</td>
+        <td>{{row.Name}}</td>
+        <td>{{row.Salary}}</td>
+    </tr>
+  {% endfor %}
+
+  </table>
+  
+</ul>
+
+</body>
+</html>
