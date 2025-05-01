@@ -12,6 +12,7 @@ connection_string = (
     "TrustServerCertificate=yes;"
 )
 
+
 @app.route('/',methods=['GET','POST'])
 def index():
 
